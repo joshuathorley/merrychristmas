@@ -8,7 +8,7 @@ $(document).ready(function() {
     currentDate = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
   $(".door").each(function() {
     var specifiedDate = $(this).data('date');
-    if (specifiedDate >= currentDate) {
+    if (specifiedDate <= currentDate) {
       $(this).addClass('enabled');
     }
   });
